@@ -2,11 +2,14 @@ import React, {PropTypes} from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 
 const TodoItems = ({todoItems}) => (
-  <ul>
-    {todoItems.map(todoItem =>
-      <TodoItem key={todoItem.id} text={todoItem.text} />
-    )}
-  </ul>
+  <div>
+    <h3>Todo Items ({todoItems.length})</h3>
+    <ul>
+      {todoItems.map(todoItem =>
+        <TodoItem key={todoItem.id} text={todoItem.text} />
+      )}
+    </ul>
+  </div>
 )
 
 TodoItems.propTypes = {
@@ -16,7 +19,5 @@ TodoItems.propTypes = {
     ).isRequired)
     .isRequired
 }
-
-
 
 export default TodoItems;

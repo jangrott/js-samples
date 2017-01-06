@@ -1,8 +1,12 @@
 import React from 'react';
 import TodoItems from '../../containers/TodoItems/TodoItems';
+import AddTodoItem from '../../containers/AddTodoItem/AddTodoItem';
 
 const App = () => (
-  <TodoItems />
+  <div>
+    <AddTodoItem />
+    <TodoItems />
+  </div>
 )
 
 export default App;
