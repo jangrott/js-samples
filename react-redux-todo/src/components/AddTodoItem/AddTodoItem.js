@@ -18,6 +18,6 @@ const AddTodoItem = ({addTodoItem}) => {
       </form>
     </div>
   )
-}
+};
 
 export default AddTodoItem;

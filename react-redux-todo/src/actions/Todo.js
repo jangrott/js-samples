@@ -6,4 +6,4 @@ export const addTodoItem = (text) => {
     id: ++nextTodoItemId,
     text
   }
-}
+};

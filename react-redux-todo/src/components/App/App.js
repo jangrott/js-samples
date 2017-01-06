@@ -7,6 +7,6 @@ const App = () => (
     <AddTodoItem />
     <TodoItems />
   </div>
-)
+);
 
 export default App;

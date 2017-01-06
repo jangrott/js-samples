@@ -10,7 +10,7 @@ const todoItem = (state, action) => {
     default:
       return state;
   }
-}
+};
 
 const todoItems = (state = [], action) => {
   switch(action.type) {
@@ -18,10 +18,10 @@ const todoItems = (state = [], action) => {
       return [
         ...state,
         todoItem(undefined, action)
-      ]
+      ];
     default:
       return state;
   }
-}
+};
 
 export default combineReducers({todoItems});

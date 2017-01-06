@@ -10,7 +10,7 @@ const TodoItems = ({todoItems}) => (
       )}
     </ul>
   </div>
-)
+);
 
 TodoItems.propTypes = {
   todoItems: PropTypes.arrayOf(
@@ -18,6 +18,6 @@ TodoItems.propTypes = {
       {id: PropTypes.number.isRequired, text: PropTypes.string.isRequired}
     ).isRequired)
     .isRequired
-}
+};
 
 export default TodoItems;
