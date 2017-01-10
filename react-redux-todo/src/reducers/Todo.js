@@ -5,8 +5,14 @@ const todoItem = (state, action) => {
     case 'ADD_TODO_ITEM':
       return {
         id: action.id,
-        text: action.text
+        text: action.text,
+        completed: false
       };
+    case 'MARK_AS_COMPLETED':
+      if (state.id === action.id) {
+        state.completed = true;
+      }
+      return state;
     default:
       return state;
   }
@@ -19,6 +25,8 @@ const todoItems = (state = [], action) => {
         ...state,
         todoItem(undefined, action)
       ];
+    case 'MARK_AS_COMPLETED':
+      return state.map(item => todoItem(item, action));
     default:
       return state;
   }
