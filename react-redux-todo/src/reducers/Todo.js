@@ -32,4 +32,13 @@ const todoItems = (state = [], action) => {
   }
 };
 
-export default combineReducers({todoItems});
+const filterCompleted = (state = false, action) => {
+  switch(action.type) {
+    case 'FILTER_COMPLETED':
+      return !state;
+    default:
+      return state;
+  }
+};
+
+export default combineReducers({todoItems, filterCompleted});
