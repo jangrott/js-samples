@@ -26,7 +26,7 @@ var c = o.a; // function reference/alias
 
 var v = 'oops global';
 
-c(); // global
+c(); // oops global
 
 function doA(fn) {
   fn();
